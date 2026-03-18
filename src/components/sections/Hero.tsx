@@ -1,8 +1,9 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Github, Bell, ChevronDown, Star } from "lucide-react";
+import { Github, Bell, Wifi, Zap, Music } from "lucide-react";
 import TypingAnimation from "@/components/TypingAnimation";
+import ParticleBackground from "@/components/ParticleBackground";
 import { trackEvent } from "@/lib/analytics";
 
 export default function Hero() {
@@ -11,6 +12,7 @@ export default function Hero() {
 
   return (
     <div className="pointer-events-none sticky top-0 z-10 flex h-screen items-center justify-center">
+      <ParticleBackground />
       <div className="pointer-events-auto mx-auto max-w-4xl px-6 text-center">
         {/* Badge */}
         <div className="animate-fade-in mb-6 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 backdrop-blur-md">
@@ -46,10 +48,6 @@ export default function Hero() {
           >
             <Github className="h-4 w-4" />
             {t("cta_github")}
-            <span className="ml-1 inline-flex items-center gap-1 rounded-full bg-white/15 px-2 py-0.5 text-xs">
-              <Star className="h-3 w-3 fill-current" />
-              12
-            </span>
           </a>
           <a
             href="#cta"
@@ -59,11 +57,30 @@ export default function Hero() {
             {t("cta_waitlist")}
           </a>
         </div>
+
+        {/* Social proof badges */}
+        <div className="animate-fade-in-delay-3 mt-8 flex flex-wrap items-center justify-center gap-3 text-[11px] text-white/50">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 px-3 py-1 backdrop-blur-sm">
+            <Wifi className="h-3 w-3 text-peach" />
+            100% Offline
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 px-3 py-1 backdrop-blur-sm">
+            <Zap className="h-3 w-3 text-cyan" />
+            0ms Latency
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 px-3 py-1 backdrop-blur-sm">
+            <Music className="h-3 w-3 text-accent-light" />
+            AI-Powered
+          </span>
+        </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="pointer-events-none absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ChevronDown className="h-6 w-6 text-white/60" />
+      {/* Scroll indicator — animated mouse icon */}
+      <div className="pointer-events-none absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+        <div className="scroll-mouse">
+          <div className="scroll-mouse-wheel" />
+        </div>
+        <span className="text-[10px] uppercase tracking-[0.2em] text-white/40">Scroll</span>
       </div>
     </div>
   );

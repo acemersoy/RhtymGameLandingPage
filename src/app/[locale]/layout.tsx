@@ -4,6 +4,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import GlowCursor from "@/components/GlowCursor";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -77,6 +78,16 @@ export default async function LocaleLayout({ children, params }: Props) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
         <NextIntlClientProvider>
+          <div className="splash-screen" id="splash">
+            <div className="splash-note">♪</div>
+            <div className="splash-bar" />
+          </div>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.addEventListener('load',function(){setTimeout(function(){document.getElementById('splash')?.classList.add('hidden')},600)})`,
+            }}
+          />
+          <GlowCursor />
           {children}
         </NextIntlClientProvider>
       </body>

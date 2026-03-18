@@ -72,7 +72,7 @@ export default function Navigation() {
             {t("language")}
           </button>
           <a
-            href="https://github.com"
+            href="https://github.com/acemersoy/RhtymGameLandingPage"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent("click_github", { location: "nav" })}
@@ -114,7 +114,7 @@ export default function Navigation() {
                 {t("language")}
               </button>
               <a
-                href="https://github.com"
+                href="https://github.com/acemersoy/RhtymGameLandingPage"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-accent px-4 py-2 text-sm font-medium text-white"

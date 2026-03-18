@@ -193,7 +193,32 @@
     "success_message": "Awesome! You're on the list. We'll keep you posted on updates.",
     "loading_message": "Submitting...",
     "error_message": "Something went wrong. Please try again.",
-    "try_again": "Try again"
+    "try_again": "Try again",
+    "waitlist_count": "people waiting"
+  },
+  "testimonials": {
+    "badge": "User Reviews",
+    "title": "What Our Beta Testers Say",
+    "items": [
+      {
+        "name": "Arda K.",
+        "role": "Music Producer",
+        "quote": "Playing a rhythm game with my own beats is incredible. And it doesn't even need internet!",
+        "stars": 5
+      },
+      {
+        "name": "Elif S.",
+        "role": "University Student",
+        "quote": "I play it on the subway every day. Loaded my Spotify playlist directly, every song is a different experience.",
+        "stars": 5
+      },
+      {
+        "name": "Mert D.",
+        "role": "Mobile Developer",
+        "quote": "I didn't expect the AI to extract note placements this accurately. Technically very impressive.",
+        "stars": 4
+      }
+    ]
   },
   "developer": {
     "name": "Avni Cem Ersoy",
@@ -218,5 +243,67 @@
       "privacy": "Privacy Policy",
       "terms": "Terms of Service"
     }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "back": "Back to Home",
+    "lastUpdated": "Last updated: March 2026",
+    "sections": [
+      {
+        "title": "1. Data Collection",
+        "content": "Rhythm Game only collects your email address during waitlist registration. The app works entirely offline and does not send your music files to our servers."
+      },
+      {
+        "title": "2. Use of Data",
+        "content": "Collected email addresses are used solely for sending app updates and launch notifications. Your email address will not be shared, sold, or rented to third parties."
+      },
+      {
+        "title": "3. Data Security",
+        "content": "Your email addresses are transmitted over encrypted connections and stored on secure servers. Only authorized personnel can access your data."
+      },
+      {
+        "title": "4. Cookies",
+        "content": "Our website may use cookies essential for basic functionality. No third-party tracking cookies are used."
+      },
+      {
+        "title": "5. Your Rights",
+        "content": "You can unsubscribe from our email list at any time and request deletion of your data. Simply send us an email to do so."
+      },
+      {
+        "title": "6. Contact",
+        "content": "For questions about our privacy policy, you can reach us at a.cem.ersoy@hotmail.com."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "back": "Back to Home",
+    "lastUpdated": "Last updated: March 2026",
+    "sections": [
+      {
+        "title": "1. Acceptance",
+        "content": "By using this website, you agree to the following terms of service. If you do not accept these terms, please do not use the site."
+      },
+      {
+        "title": "2. Service Description",
+        "content": "Rhythm Game is a mobile application that allows users to convert MP3 files into rhythm games using artificial intelligence. This website serves as the promotional landing page for the app."
+      },
+      {
+        "title": "3. Waitlist Registration",
+        "content": "By registering for the waitlist, you agree to receive email notifications about the app launch. You can unsubscribe at any time."
+      },
+      {
+        "title": "4. Intellectual Property",
+        "content": "The Rhythm Game name, logo, design, and all content belong to Avni Cem Ersoy. Unauthorized use, copying, or distribution is prohibited."
+      },
+      {
+        "title": "5. Limitation of Liability",
+        "content": "The app and website are provided as-is. We cannot be held responsible for any interruptions, errors, or data loss."
+      },
+      {
+        "title": "6. Changes",
+        "content": "We reserve the right to modify these terms without prior notice. Current terms are always published on this page."
+      }
+    ]
   }
 }

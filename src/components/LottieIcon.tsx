@@ -67,7 +67,7 @@ export default function LottieIcon({
           style={{ width: size, height: size }}
         />
       ) : (
-        <div className="rounded-lg bg-surface-alt/50" style={{ width: size, height: size }} />
+        <div className="skeleton" style={{ width: size, height: size }} />
       )}
     </div>
   );

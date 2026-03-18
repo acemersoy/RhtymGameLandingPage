@@ -1,15 +1,57 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 import Image from "next/image";
 
-// Real app screenshots: pick song → AI analyzes → play
 const stepImages = [
-  "/screenshots/home.png",
-  "/screenshots/analyzing.png",
-  "/screenshots/song-details.png",
+  ["/screenshots/home.png", "/screenshots/splash.png"],
+  ["/screenshots/analyzing.png", "/screenshots/song-details.png"],
+  ["/screenshots/gameplay.png", "/screenshots/score.png"],
 ];
+
+function PhoneCarousel({ images, alt }: { images: string[]; alt: string }) {
+  const [active, setActive] = useState(0);
+
+  return (
+    <div className="relative rounded-[2rem] border-2 border-border/60 bg-background p-2 shadow-2xl shadow-accent/5">
+      <div className="overflow-hidden rounded-[1.5rem]">
+        <div
+          className="flex transition-transform duration-500 ease-out"
+          style={{ transform: `translateX(-${active * 100}%)` }}
+        >
+          {images.map((src, i) => (
+            <Image
+              key={i}
+              src={src}
+              alt={`${alt} ${i + 1}`}
+              width={240}
+              height={480}
+              className="h-auto w-[200px] flex-shrink-0 object-contain sm:w-[240px]"
+            />
+          ))}
+        </div>
+      </div>
+      {images.length > 1 && (
+        <div className="mt-3 flex justify-center gap-1.5">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActive(i)}
+              aria-label={`Screenshot ${i + 1}`}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                i === active
+                  ? "w-5 bg-peach"
+                  : "w-1.5 bg-border hover:bg-muted"
+              }`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function HowItWorks() {
   const t = useTranslations("howItWorks");
@@ -28,7 +70,7 @@ export default function HowItWorks() {
           <p className="mt-5 text-lg leading-relaxed text-muted">{t("subtitle")}</p>
         </div>
 
-        {/* Steps — alternating layout with screenshots */}
+        {/* Steps — alternating layout with screenshot carousel */}
         <div className="space-y-16 sm:space-y-20">
           {steps.map((step, i) => (
             <div
@@ -37,19 +79,9 @@ export default function HowItWorks() {
                 i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
               } items-center`}
             >
-              {/* Phone mockup with real screenshot */}
+              {/* Phone mockup with carousel */}
               <div className="flex w-full justify-center md:w-1/2">
-                <div className="relative rounded-[2rem] border-2 border-border/60 bg-background p-2 shadow-2xl shadow-accent/5">
-                  <div className="overflow-hidden rounded-[1.5rem]">
-                    <Image
-                      src={stepImages[i]}
-                      alt={step.title}
-                      width={240}
-                      height={480}
-                      className="h-auto w-[200px] object-contain sm:w-[240px]"
-                    />
-                  </div>
-                </div>
+                <PhoneCarousel images={stepImages[i]} alt={step.title} />
               </div>
 
               {/* Text */}

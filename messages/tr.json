@@ -193,7 +193,32 @@
     "success_message": "Harika! Listeye eklendin. Yeniliklerden seni haberdar edeceğiz.",
     "loading_message": "Kaydediliyor...",
     "error_message": "Bir hata oluştu. Lütfen tekrar dene.",
-    "try_again": "Tekrar dene"
+    "try_again": "Tekrar dene",
+    "waitlist_count": "kişi bekliyor"
+  },
+  "testimonials": {
+    "badge": "Kullanıcı Yorumları",
+    "title": "Beta Testçilerimiz Ne Diyor?",
+    "items": [
+      {
+        "name": "Arda K.",
+        "role": "Müzik Prodüktörü",
+        "quote": "Kendi yaptığım beat'lerle ritim oyunu oynayabilmek inanılmaz. Üstelik internet bile gerekmiyor!",
+        "stars": 5
+      },
+      {
+        "name": "Elif S.",
+        "role": "Üniversite Öğrencisi",
+        "quote": "Metroda her gün oynuyorum. Spotify listemi direkt yükledim, her şarkı farklı bir deneyim.",
+        "stars": 5
+      },
+      {
+        "name": "Mert D.",
+        "role": "Mobil Geliştirici",
+        "quote": "AI'ın nota yerleşimlerini bu kadar doğru çıkarmasını beklemiyordum. Teknik olarak çok etkileyici.",
+        "stars": 4
+      }
+    ]
   },
   "developer": {
     "name": "Avni Cem Ersoy",
@@ -218,5 +243,67 @@
       "privacy": "Gizlilik Politikası",
       "terms": "Kullanım Şartları"
     }
+  },
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "back": "Ana Sayfaya Dön",
+    "lastUpdated": "Son güncelleme: Mart 2026",
+    "sections": [
+      {
+        "title": "1. Toplanan Veriler",
+        "content": "Rhythm Game yalnızca waitlist kaydı sırasında e-posta adresinizi toplar. Uygulama tamamen çevrimdışı çalışır ve cihazınızdaki müzik dosyalarını sunucularımıza göndermez."
+      },
+      {
+        "title": "2. Verilerin Kullanımı",
+        "content": "Toplanan e-posta adresleri yalnızca uygulama güncellemeleri ve lansman bildirimleri göndermek amacıyla kullanılır. E-posta adresiniz üçüncü taraflarla paylaşılmaz, satılmaz veya kiralanmaz."
+      },
+      {
+        "title": "3. Veri Güvenliği",
+        "content": "E-posta adresleriniz şifreli bağlantılar üzerinden iletilir ve güvenli sunucularda saklanır. Verilerinize yalnızca yetkili kişiler erişebilir."
+      },
+      {
+        "title": "4. Çerezler",
+        "content": "Web sitemiz temel işlevsellik için gerekli çerezleri kullanabilir. Üçüncü taraf izleme çerezleri kullanılmaz."
+      },
+      {
+        "title": "5. Haklarınız",
+        "content": "İstediğiniz zaman e-posta listemizden çıkabilir, verilerinizin silinmesini talep edebilirsiniz. Bunun için bize e-posta göndermaniz yeterlidir."
+      },
+      {
+        "title": "6. İletişim",
+        "content": "Gizlilik politikamız hakkında sorularınız için a.cem.ersoy@hotmail.com adresinden bize ulaşabilirsiniz."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Kullanım Şartları",
+    "back": "Ana Sayfaya Dön",
+    "lastUpdated": "Son güncelleme: Mart 2026",
+    "sections": [
+      {
+        "title": "1. Kabul",
+        "content": "Bu web sitesini kullanarak aşağıdaki kullanım şartlarını kabul etmiş sayılırsınız. Şartları kabul etmiyorsanız siteyi kullanmayınız."
+      },
+      {
+        "title": "2. Hizmet Tanımı",
+        "content": "Rhythm Game, kullanıcıların MP3 dosyalarını yapay zeka ile ritim oyununa dönüştürmelerine olanak tanıyan bir mobil uygulamadır. Bu web sitesi uygulamanın tanıtım sayfasıdır."
+      },
+      {
+        "title": "3. Waitlist Kaydı",
+        "content": "Waitlist'e kayıt olarak uygulama lansmanı hakkında e-posta bildirimleri almayı kabul edersiniz. İstediğiniz zaman listeden çıkabilirsiniz."
+      },
+      {
+        "title": "4. Fikri Mülkiyet",
+        "content": "Rhythm Game adı, logosu, tasarımı ve tüm içerikler Avni Cem Ersoy'a aittir. İzinsiz kullanım, kopyalama veya dağıtım yasaktır."
+      },
+      {
+        "title": "5. Sorumluluk Sınırı",
+        "content": "Uygulama ve web sitesi olduğu gibi sunulur. Herhangi bir kesinti, hata veya veri kaybından sorumlu tutulamayız."
+      },
+      {
+        "title": "6. Değişiklikler",
+        "content": "Bu şartları önceden bildirimde bulunmaksızın değiştirme hakkımız saklıdır. Güncel şartlar her zaman bu sayfada yayınlanır."
+      }
+    ]
   }
 }

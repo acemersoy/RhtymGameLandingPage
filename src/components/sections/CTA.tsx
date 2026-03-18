@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { Github, Loader2, CheckCircle, Mail, AlertCircle } from "lucide-react";
+import { Github, Loader2, CheckCircle, Mail, AlertCircle, Users } from "lucide-react";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 import { trackEvent } from "@/lib/analytics";
 
@@ -12,6 +12,14 @@ export default function CTA() {
   const ref = useScrollReveal();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [waitlistCount, setWaitlistCount] = useState(0);
+
+  useEffect(() => {
+    fetch("/api/waitlist-count")
+      .then((r) => r.json())
+      .then((d) => setWaitlistCount(d.count))
+      .catch(() => {});
+  }, [status]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -109,6 +117,14 @@ export default function CTA() {
               </form>
             )}
           </div>
+
+          {/* Waitlist counter */}
+          {waitlistCount > 0 && (
+            <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-4 py-1.5 text-xs text-accent-light">
+              <Users className="h-3.5 w-3.5" />
+              <span>{waitlistCount} {t("waitlist_count")}</span>
+            </div>
+          )}
 
           {/* GitHub */}
           <div className="mt-6">

@@ -2,6 +2,25 @@
 
 import { useTranslations } from "next-intl";
 import { useScrollReveal } from "@/lib/useScrollReveal";
+import { useCountUp } from "@/lib/useCountUp";
+
+function AnimatedStat({ value, label }: { value: string; label: string }) {
+  const numericMatch = value.match(/^(\d+)/);
+  const numericValue = numericMatch ? parseInt(numericMatch[1], 10) : 0;
+  const suffix = numericMatch ? value.slice(numericMatch[1].length) : "";
+  const isSpecial = value === "∞";
+
+  const { count, ref } = useCountUp(numericValue, 1800);
+
+  return (
+    <div ref={ref} className="text-center">
+      <div className="gradient-text-warm text-3xl font-bold sm:text-4xl">
+        {isSpecial ? "∞" : `${count}${suffix}`}
+      </div>
+      <div className="mt-1 text-sm text-muted">{label}</div>
+    </div>
+  );
+}
 
 export default function Stats() {
   const t = useTranslations("stats");
@@ -19,14 +38,7 @@ export default function Stats() {
 
           <div className="relative z-10 grid grid-cols-2 gap-10 md:grid-cols-4">
             {items.map((item, i) => (
-              <div key={i} className="text-center">
-                <div className="gradient-text-warm text-3xl font-bold sm:text-4xl">
-                  {item.value}
-                </div>
-                <div className="mt-1 text-sm text-muted">
-                  {item.label}
-                </div>
-              </div>
+              <AnimatedStat key={i} value={item.value} label={item.label} />
             ))}
           </div>
         </div>

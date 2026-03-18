@@ -59,3 +59,9 @@ export function markNotified(id: number): void {
   const db = getDb();
   db.prepare("UPDATE subscribers SET notified = 1 WHERE id = ?").run(id);
 }
+
+export function getSubscriberCount(): number {
+  const db = getDb();
+  const row = db.prepare("SELECT COUNT(*) as count FROM subscribers").get() as { count: number };
+  return row.count;
+}
