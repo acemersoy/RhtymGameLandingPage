@@ -1,0 +1,17 @@
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - GMAIL_USER=senin-gmail@gmail.com
+      - GMAIL_APP_PASSWORD=xxxx-xxxx-xxxx-xxxx
+      - NOTIFY_SECRET=guclu-bir-secret-key
+      - NODE_ENV=production
+      - HOSTNAME=0.0.0.0
+    volumes:
+      - waitlist-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  waitlist-data:

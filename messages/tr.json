@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "title": "Rhythm Game — Cebindeki Müzik, Parmak Ucunda Ritim",
+    "description": "Herhangi bir MP3'ü yapay zeka ile anında ritim oyununa dönüştür. Tamamen çevrimdışı, sıfır gecikme, sınırsız şarkı."
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "features": "Özellikler",
+    "howItWorks": "Nasıl Çalışır",
+    "techStack": "Teknoloji",
+    "faq": "SSS",
+    "github": "GitHub",
+    "getStarted": "Başla",
+    "language": "EN"
+  },
+  "hero": {
+    "badge": "Yeni Nesil Ritim Oyunu",
+    "title": "Cebindeki Müzik, Parmak Ucunda Ritim",
+    "subtitle": "Telefonundaki herhangi bir MP3'ü yapay zeka ile anında ritim oyununa dönüştür. İnternete gerek yok, bulut maliyeti yok — tamamen senin cihazında çalışır.",
+    "cta_github": "GitHub'da İncele",
+    "cta_waitlist": "Bana Haber Ver",
+    "typing": [
+      "Kendi müziğinle oyna",
+      "İnternet gerekmez",
+      "Sıfır gecikme",
+      "Sınırsız şarkı"
+    ]
+  },
+  "problem": {
+    "badge": "Mevcut Sorunlar",
+    "title": "Ritim Oyunlarında Eksik Olan Ne?",
+    "subtitle": "Mevcut ritim oyunları seni sınırlıyor. Biz bunu değiştirmek için buradayız.",
+    "items": [
+      {
+        "title": "Statik İçerik Darboğazı",
+        "description": "Geleneksel ritim oyunları önceden hazırlanmış sınırlı şarkı listeleriyle geliyor. Yeni içerik için haftalarca beklemek zorunda kalıyorsun."
+      },
+      {
+        "title": "Bulut Bağımlılığı",
+        "description": "Çoğu oyun analiz için bulut sunucularına bağımlı. İnternet yoksa oyun da yok — üstelik veri gizliliğin de risk altında."
+      },
+      {
+        "title": "Kişiselleştirme Eksikliği",
+        "description": "Kendi sevdiğin şarkılarla oynayamıyorsun. Başkasının seçtiği müziklerle yetinmek zorunda kalıyorsun."
+      }
+    ]
+  },
+  "features": {
+    "badge": "Özellikler",
+    "title": "Müziğin, Senin Kurallarınla",
+    "subtitle": "Yapay zeka destekli analiz motorumuz her MP3'ten benzersiz bir ritim deneyimi yaratır.",
+    "items": [
+      {
+        "title": "Beat-Grid AI",
+        "description": "Python Librosa tabanlı yapay zeka motoru, şarkının tempo, ritim ve enerji haritasını çıkararak dinamik beatmap'ler oluşturur. Her şarkı kendine özel bir deneyim sunar."
+      },
+      {
+        "title": "100% Çevrimdışı",
+        "description": "Tüm analiz doğrudan cihazında gerçekleşir. İnternete, bulut sunucusuna ya da aboneliğe gerek yok. Uçakta, metroda, dağ başında — her yerde oyna."
+      },
+      {
+        "title": "60 FPS Oynanış",
+        "description": "Jetpack Compose ile optimize edilmiş akıcı animasyonlar ve sıfır gecikme. Her dokunuşun müzikle mükemmel senkronize olduğunu hissedeceksin."
+      },
+      {
+        "title": "Herhangi Bir MP3 Desteği",
+        "description": "Telefonundaki herhangi bir MP3 dosyasını seç ve saniyeler içinde oynamaya başla. Pop, rock, elektronik, klasik — tür fark etmez."
+      }
+    ]
+  },
+  "howItWorks": {
+    "badge": "Nasıl Çalışır",
+    "title": "Üç Adımda Ritme Başla",
+    "subtitle": "Karmaşık kurulumlar yok, hesap oluşturma yok. Sadece müziğini seç ve oyna.",
+    "steps": [
+      {
+        "title": "MP3 Dosyanı Seç",
+        "description": "Telefonundaki müzik kütüphanenden istediğin şarkıyı seç. Herhangi bir MP3 dosyası çalışır — tür ya da uzunluk sınırı yok."
+      },
+      {
+        "title": "Yapay Zeka Analiz Etsin",
+        "description": "Librosa destekli AI motoru şarkını saniyeler içinde analiz eder. Tempo, beat, enerji seviyesi ve ritim kalıplarını tespit ederek sana özel bir beatmap oluşturur."
+      },
+      {
+        "title": "Oyna ve Keyfini Çıkar",
+        "description": "60 FPS akıcı oynanışla ritme katıl. Notalar müzikle mükemmel senkronize akar — skorunu kır ve ustalaş."
+      }
+    ]
+  },
+  "stats": {
+    "items": [
+      {
+        "value": "0ms",
+        "label": "Gecikme"
+      },
+      {
+        "value": "100%",
+        "label": "Çevrimdışı"
+      },
+      {
+        "value": "60",
+        "label": "FPS"
+      },
+      {
+        "value": "∞",
+        "label": "Şarkı"
+      }
+    ]
+  },
+  "techStack": {
+    "badge": "Teknoloji Yığını",
+    "title": "Arkasındaki Güç",
+    "subtitle": "Modern, performans odaklı ve açık kaynak teknolojilerle inşa edildi.",
+    "items": [
+      {
+        "name": "Kotlin",
+        "description": "Android'in modern ve güvenli programlama dili. Null safety ve coroutine desteğiyle kararlı, yüksek performanslı uygulama geliştirme."
+      },
+      {
+        "name": "Jetpack Compose",
+        "description": "Google'ın deklaratif UI framework'ü. 60 FPS akıcı animasyonlar ve modern, reaktif arayüz tasarımı."
+      },
+      {
+        "name": "Python / Librosa",
+        "description": "Endüstri standardı ses analiz kütüphanesi. Tempo algılama, beat tracking, spektral analiz ve enerji haritalama."
+      },
+      {
+        "name": "Chaquopy",
+        "description": "Android üzerinde Python çalıştıran köprü teknolojisi. Librosa'nın tüm gücünü doğrudan mobil cihazda kullanmayı mümkün kılar."
+      },
+      {
+        "name": "Room DB",
+        "description": "Yerel veritabanı ile beatmap önbellekleme. Bir kez analiz et, her zaman anında oyna — tekrar bekleme yok."
+      },
+      {
+        "name": "ExoPlayer",
+        "description": "Google'ın gelişmiş medya oynatıcısı. Hassas ses senkronizasyonu ve düşük gecikmeli MP3 çalma."
+      }
+    ]
+  },
+  "security": {
+    "badge": "Güvenlik ve Gizlilik",
+    "title": "Verin Sende Kalır",
+    "subtitle": "Gizliliğin bizim için bir özellik değil, temel bir ilke.",
+    "items": [
+      {
+        "title": "Edge Computing",
+        "description": "Tüm ses analizi ve beatmap oluşturma işlemi doğrudan senin cihazında gerçekleşir. Hiçbir veri dışarı çıkmaz, hiçbir sunucuya bağlanmaz."
+      },
+      {
+        "title": "Gizlilik Öncelikli",
+        "description": "Müzik dosyaların, oyun verilen ve kişisel bilgilerin telefonundan asla ayrılmaz. Hesap oluşturmana bile gerek yok."
+      },
+      {
+        "title": "Açık Kaynak",
+        "description": "Tüm kaynak kodu GitHub'da açık ve şeffaf. Ne yaptığımızı görebilir, inceleyebilir ve katkıda bulunabilirsin."
+      }
+    ]
+  },
+  "faq": {
+    "badge": "Sıkça Sorulan Sorular",
+    "title": "Merak Ettiklerin",
+    "items": [
+      {
+        "question": "Hangi müzik formatlarını destekliyor?",
+        "answer": "Şu anda MP3 formatını destekliyoruz. İlerleyen sürümlerde WAV, FLAC ve OGG desteği de eklenecek. Telefonundaki hemen hemen her şarkıyı kullanabilirsin."
+      },
+      {
+        "question": "Gerçekten internete gerek yok mu?",
+        "answer": "Evet, tamamen çevrimdışı çalışır! Ses analizi ve beatmap oluşturma dahil tüm işlemler doğrudan cihazında gerçekleşir. Uçak modunda bile oynayabilirsin."
+      },
+      {
+        "question": "Analiz ne kadar sürer?",
+        "answer": "Ortalama bir şarkı için analiz süresi cihazına bağlı olarak 5-15 saniye arasında değişir. Oluşturulan beatmap yerel veritabanında saklanır, böylece aynı şarkıyı tekrar açtığında anında oynayabilirsin."
+      },
+      {
+        "question": "Hangi Android sürümlerini destekliyor?",
+        "answer": "Android 8.0 (API 26) ve üzeri tüm cihazlarda çalışır. Jetpack Compose ve Chaquopy altyapısı sayesinde geniş bir cihaz yelpazesini destekliyoruz."
+      },
+      {
+        "question": "Projeye nasıl katkıda bulunabilirim?",
+        "answer": "GitHub repomuzu ziyaret ederek issue açabilir, pull request gönderebilir veya tartışmalara katılabilirsin. Her türlü katkıya açığız — kod, tasarım, çeviri veya sadece geri bildirim bile çok değerli."
+      }
+    ]
+  },
+  "cta": {
+    "badge": "Erken Erişim",
+    "title": "Ritme Hazır Mısın?",
+    "subtitle": "Lansman listesine katıl, ilk deneyenlerden ol. Spam yok, sadece önemli güncellemeler.",
+    "email_placeholder": "E-posta adresin",
+    "button_submit": "Bana Haber Ver",
+    "button_github": "GitHub'da İncele",
+    "success_message": "Harika! Listeye eklendin. Yeniliklerden seni haberdar edeceğiz.",
+    "loading_message": "Kaydediliyor...",
+    "error_message": "Bir hata oluştu. Lütfen tekrar dene.",
+    "try_again": "Tekrar dene"
+  },
+  "developer": {
+    "name": "Avni Cem Ersoy",
+    "role": "Geliştirici & Müzik Tutkunu",
+    "quote": "Bu projeyi, favori şarkılarımla oynayabileceğim bir ritim oyunu bulamadığım için başlattım. Metroda, uçakta, internetsiz — her yerde müziğimle oynayabilmek istiyordum. Rhythm Game bu hayalin ürünü."
+  },
+  "footer": {
+    "description": "Telefonundaki herhangi bir MP3'ü yapay zeka ile ritim oyununa dönüştür. Tamamen çevrimdışı, sınırsız şarkı.",
+    "newsletter_title": "Güncellemelerden haberdar ol",
+    "newsletter_placeholder": "E-posta adresin",
+    "newsletter_button": "Abone Ol",
+    "newsletter_success": "Başarıyla abone oldun!",
+    "sections": {
+      "links": "Hızlı Linkler",
+      "legal": "Yasal",
+      "social": "Bizi Takip Et"
+    },
+    "copyright": "Tüm hakları saklıdır. Avni Cem Ersoy",
+    "madeWith": "ile yapıldı",
+    "links": {
+      "github": "GitHub",
+      "privacy": "Gizlilik Politikası",
+      "terms": "Kullanım Şartları"
+    }
+  }
+}

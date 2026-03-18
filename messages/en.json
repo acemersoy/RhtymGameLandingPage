@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "title": "Rhythm Game — Your Music, Your Rhythm",
+    "description": "Turn any MP3 into an instant rhythm game with on-device AI. Fully offline, zero latency, unlimited songs."
+  },
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "techStack": "Tech Stack",
+    "faq": "FAQ",
+    "github": "GitHub",
+    "getStarted": "Get Started",
+    "language": "TR"
+  },
+  "hero": {
+    "badge": "Next-Gen Rhythm Game",
+    "title": "Your Music, Your Rhythm",
+    "subtitle": "Turn any MP3 on your phone into an instant rhythm game with on-device AI. No internet needed, no cloud costs — it all runs right on your device.",
+    "cta_github": "View on GitHub",
+    "cta_waitlist": "Notify Me",
+    "typing": [
+      "Play with your own music",
+      "No internet required",
+      "Zero latency",
+      "Unlimited songs"
+    ]
+  },
+  "problem": {
+    "badge": "The Problem",
+    "title": "What's Missing in Rhythm Games?",
+    "subtitle": "Current rhythm games hold you back. We're here to change that.",
+    "items": [
+      {
+        "title": "Static Content Bottleneck",
+        "description": "Traditional rhythm games ship with a limited pre-made song library. You're stuck waiting weeks for new content drops."
+      },
+      {
+        "title": "Cloud Dependency",
+        "description": "Most games rely on cloud servers for audio analysis. No internet means no game — and your data privacy is at risk."
+      },
+      {
+        "title": "No Personalization",
+        "description": "You can't play the songs you actually love. You're forced to settle for someone else's playlist."
+      }
+    ]
+  },
+  "features": {
+    "badge": "Features",
+    "title": "Your Music, Your Rules",
+    "subtitle": "Our AI-powered analysis engine creates a unique rhythm experience from every MP3.",
+    "items": [
+      {
+        "title": "Beat-Grid AI",
+        "description": "Powered by Python Librosa, our AI engine extracts tempo, rhythm, and energy maps from your songs to generate dynamic beatmaps. Every track gets its own unique gameplay."
+      },
+      {
+        "title": "100% Offline",
+        "description": "All analysis happens directly on your device. No internet, no cloud servers, no subscriptions. Play on a plane, on the subway, on a mountaintop — anywhere."
+      },
+      {
+        "title": "60 FPS Gameplay",
+        "description": "Buttery-smooth animations optimized with Jetpack Compose and zero latency. Every tap feels perfectly synchronized with the music."
+      },
+      {
+        "title": "Any MP3 Support",
+        "description": "Pick any MP3 file from your phone and start playing within seconds. Pop, rock, electronic, classical — genre doesn't matter."
+      }
+    ]
+  },
+  "howItWorks": {
+    "badge": "How It Works",
+    "title": "Three Steps to the Beat",
+    "subtitle": "No complex setup, no account creation. Just pick your music and play.",
+    "steps": [
+      {
+        "title": "Choose Your MP3",
+        "description": "Select any song from your phone's music library. Any MP3 file works — no genre or length restrictions."
+      },
+      {
+        "title": "AI Analyzes It",
+        "description": "Our Librosa-powered AI engine analyzes your song in seconds. It detects tempo, beats, energy levels, and rhythm patterns to generate a custom beatmap just for you."
+      },
+      {
+        "title": "Play and Enjoy",
+        "description": "Jump into the rhythm with 60 FPS fluid gameplay. Notes flow in perfect sync with the music — beat your score and master the track."
+      }
+    ]
+  },
+  "stats": {
+    "items": [
+      {
+        "value": "0ms",
+        "label": "Latency"
+      },
+      {
+        "value": "100%",
+        "label": "Offline"
+      },
+      {
+        "value": "60",
+        "label": "FPS"
+      },
+      {
+        "value": "∞",
+        "label": "Songs"
+      }
+    ]
+  },
+  "techStack": {
+    "badge": "Tech Stack",
+    "title": "The Power Behind It",
+    "subtitle": "Built with modern, performance-focused, and open source technologies.",
+    "items": [
+      {
+        "name": "Kotlin",
+        "description": "Android's modern and type-safe programming language. Null safety and coroutine support for stable, high-performance app development."
+      },
+      {
+        "name": "Jetpack Compose",
+        "description": "Google's declarative UI framework. 60 FPS smooth animations and modern, reactive interface design."
+      },
+      {
+        "name": "Python / Librosa",
+        "description": "Industry-standard audio analysis library. Tempo detection, beat tracking, spectral analysis, and energy mapping."
+      },
+      {
+        "name": "Chaquopy",
+        "description": "The bridge that runs Python on Android. Brings the full power of Librosa directly to your mobile device."
+      },
+      {
+        "name": "Room DB",
+        "description": "Local database for beatmap caching. Analyze once, play instantly forever — no waiting the second time around."
+      },
+      {
+        "name": "ExoPlayer",
+        "description": "Google's advanced media player. Precise audio synchronization and low-latency MP3 playback."
+      }
+    ]
+  },
+  "security": {
+    "badge": "Security & Privacy",
+    "title": "Your Data Stays Yours",
+    "subtitle": "Privacy isn't a feature for us — it's a core principle.",
+    "items": [
+      {
+        "title": "Edge Computing",
+        "description": "All audio analysis and beatmap generation happens entirely on your device. No data leaves your phone, no server connections required."
+      },
+      {
+        "title": "Privacy First",
+        "description": "Your music files, game data, and personal information never leave your phone. You don't even need to create an account."
+      },
+      {
+        "title": "Open Source",
+        "description": "The entire source code is open and transparent on GitHub. See exactly what we do, review it, and contribute."
+      }
+    ]
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "What music formats are supported?",
+        "answer": "We currently support MP3 format. WAV, FLAC, and OGG support will be added in future releases. You can use virtually any song on your phone."
+      },
+      {
+        "question": "Does it really work without internet?",
+        "answer": "Yes, it's fully offline! All processing, including audio analysis and beatmap generation, happens directly on your device. You can even play in airplane mode."
+      },
+      {
+        "question": "How long does the analysis take?",
+        "answer": "For an average song, analysis takes between 5-15 seconds depending on your device. The generated beatmap is stored in a local database, so the same song loads instantly the next time."
+      },
+      {
+        "question": "Which Android versions are supported?",
+        "answer": "It runs on Android 8.0 (API 26) and above. Thanks to the Jetpack Compose and Chaquopy infrastructure, we support a wide range of devices."
+      },
+      {
+        "question": "How can I contribute to the project?",
+        "answer": "Visit our GitHub repo to open issues, submit pull requests, or join discussions. We welcome all contributions — code, design, translations, or even just feedback."
+      }
+    ]
+  },
+  "cta": {
+    "badge": "Early Access",
+    "title": "Ready to Feel the Rhythm?",
+    "subtitle": "Join the launch list and be among the first to try it. No spam, just important updates.",
+    "email_placeholder": "Your email address",
+    "button_submit": "Notify Me",
+    "button_github": "View on GitHub",
+    "success_message": "Awesome! You're on the list. We'll keep you posted on updates.",
+    "loading_message": "Submitting...",
+    "error_message": "Something went wrong. Please try again.",
+    "try_again": "Try again"
+  },
+  "developer": {
+    "name": "Avni Cem Ersoy",
+    "role": "Developer & Music Enthusiast",
+    "quote": "I started this project because I couldn't find a rhythm game that let me play with my favorite songs. On the subway, on a plane, offline — I wanted to play with my music everywhere. Rhythm Game is the product of that dream."
+  },
+  "footer": {
+    "description": "Turn any MP3 on your phone into an instant rhythm game with on-device AI. Fully offline, unlimited songs.",
+    "newsletter_title": "Stay in the loop",
+    "newsletter_placeholder": "Your email address",
+    "newsletter_button": "Subscribe",
+    "newsletter_success": "You're subscribed!",
+    "sections": {
+      "links": "Quick Links",
+      "legal": "Legal",
+      "social": "Follow Us"
+    },
+    "copyright": "All rights reserved. Avni Cem Ersoy",
+    "madeWith": "made with",
+    "links": {
+      "github": "GitHub",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  }
+}
