@@ -10,14 +10,14 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
-  const subscribers = getAllUnnotified();
+  const subscribers = await getAllUnnotified();
   let sent = 0;
   let failed = 0;
 
   for (const sub of subscribers) {
     try {
       await sendLaunchNotification(sub.email, sub.locale);
-      markNotified(sub.id);
+      await markNotified(sub.id);
       sent++;
     } catch (err) {
       console.error(`Failed to notify ${sub.email}:`, err);

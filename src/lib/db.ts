@@ -1,42 +1,38 @@
-import Database from "better-sqlite3";
-import path from "path";
+import { neon } from "@neondatabase/serverless";
 
-const DB_PATH = path.join(process.cwd(), "data", "waitlist.db");
-
-let _db: Database.Database | null = null;
-
-function getDb(): Database.Database {
-  if (!_db) {
-    _db = new Database(DB_PATH);
-    _db.pragma("journal_mode = WAL");
-    _db.exec(`
-      CREATE TABLE IF NOT EXISTS subscribers (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        email TEXT UNIQUE NOT NULL,
-        locale TEXT DEFAULT 'tr',
-        created_at TEXT DEFAULT (datetime('now')),
-        notified INTEGER DEFAULT 0
-      )
-    `);
-  }
-  return _db;
+function getSQL() {
+  return neon(process.env.DATABASE_URL!);
 }
 
-export function addSubscriber(
+export async function ensureTable() {
+  const sql = getSQL();
+  await sql`
+    CREATE TABLE IF NOT EXISTS subscribers (
+      id SERIAL PRIMARY KEY,
+      email TEXT UNIQUE NOT NULL,
+      locale TEXT DEFAULT 'tr',
+      created_at TIMESTAMP DEFAULT NOW(),
+      notified BOOLEAN DEFAULT FALSE
+    )
+  `;
+}
+
+export async function addSubscriber(
   email: string,
   locale: string
-): { success: boolean; already: boolean } {
-  const db = getDb();
+): Promise<{ success: boolean; already: boolean }> {
+  const sql = getSQL();
+  await ensureTable();
   try {
-    db.prepare("INSERT INTO subscribers (email, locale) VALUES (?, ?)").run(
-      email.toLowerCase().trim(),
-      locale
-    );
+    await sql`
+      INSERT INTO subscribers (email, locale)
+      VALUES (${email.toLowerCase().trim()}, ${locale})
+    `;
     return { success: true, already: false };
   } catch (err: unknown) {
     if (
       err instanceof Error &&
-      err.message.includes("UNIQUE constraint failed")
+      err.message.includes("duplicate key value")
     ) {
       return { success: true, already: true };
     }
@@ -44,24 +40,25 @@ export function addSubscriber(
   }
 }
 
-export function getAllUnnotified(): {
-  id: number;
-  email: string;
-  locale: string;
-}[] {
-  const db = getDb();
-  return db
-    .prepare("SELECT id, email, locale FROM subscribers WHERE notified = 0")
-    .all() as { id: number; email: string; locale: string }[];
+export async function getAllUnnotified(): Promise<
+  { id: number; email: string; locale: string }[]
+> {
+  const sql = getSQL();
+  await ensureTable();
+  const rows = await sql`
+    SELECT id, email, locale FROM subscribers WHERE notified = FALSE
+  `;
+  return rows as { id: number; email: string; locale: string }[];
 }
 
-export function markNotified(id: number): void {
-  const db = getDb();
-  db.prepare("UPDATE subscribers SET notified = 1 WHERE id = ?").run(id);
+export async function markNotified(id: number): Promise<void> {
+  const sql = getSQL();
+  await sql`UPDATE subscribers SET notified = TRUE WHERE id = ${id}`;
 }
 
-export function getSubscriberCount(): number {
-  const db = getDb();
-  const row = db.prepare("SELECT COUNT(*) as count FROM subscribers").get() as { count: number };
-  return row.count;
+export async function getSubscriberCount(): Promise<number> {
+  const sql = getSQL();
+  await ensureTable();
+  const rows = await sql`SELECT COUNT(*) as count FROM subscribers`;
+  return Number(rows[0].count);
 }

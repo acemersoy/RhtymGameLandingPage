@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const result = addSubscriber(email, locale || "tr");
+    const result = await addSubscriber(email, locale || "tr");
 
     if (!result.already) {
       try {
